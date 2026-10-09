@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>김바이브 | 프론트엔드 개발자 포트폴리오</title>
+  <meta name="description" content="프론트엔드 개발자 김바이브의 포트폴리오" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">vibe<span>.</span>kim</a>
+      <nav class="menu" id="menu">
+        <a href="#about" data-link><i>01</i>소개</a>
+        <a href="#skills" data-link><i>02</i>기술</a>
+        <a href="#projects" data-link><i>03</i>프로젝트</a>
+        <a href="#experience" data-link><i>04</i>경력</a>
+        <a href="#contact" data-link><i>05</i>연락</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="pill-btn" id="themeToggle" aria-label="테마 전환">DARK</button>
+        <button class="pill-btn burger" id="burger" aria-label="메뉴 열기">MENU</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div class="hero-meta reveal">
+          <span>Portfolio — Frontend Developer</span>
+          <span>Seoul, KR</span>
+        </div>
+
+        <p class="eyebrow reveal">안녕하세요, 저는</p>
+        <h1 class="reveal">
+          <span class="name">김바이브</span>
+          <span class="role"><span id="typing"></span><span class="cursor">_</span></span>
+        </h1>
+
+        <div class="hero-bottom reveal">
+          <p class="lead">
+            사용자 경험을 가장 먼저 생각하며, 빠르고 아름다운 웹 인터페이스를 만드는
+            프론트엔드 개발자입니다.
+          </p>
+          <div class="hero-side">
+            <div class="hero-cta">
+              <a href="#projects" class="btn primary">프로젝트 보기</a>
+              <a href="#contact" class="btn ghost">연락하기</a>
+            </div>
+            <div class="socials">
+              <a href="#" aria-label="GitHub">GitHub ↗</a>
+              <a href="#" aria-label="LinkedIn">LinkedIn ↗</a>
+              <a href="#" aria-label="Blog">Blog ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="avatar-wrap reveal">
+          <div class="avatar">KV</div>
+          <div class="badge">Open to work</div>
+        </div>
+        <div class="reveal">
+          <h2 class="title"><small>01 — About</small>저를 소개합니다</h2>
+          <p class="text">
+            5년차 프론트엔드 개발자로, 스타트업부터 대기업 프로젝트까지 다양한 환경에서
+            제품을 만들어 왔습니다. 디자인 시스템 구축, 성능 최적화, 접근성 개선에 관심이 많으며
+            팀과 함께 성장하는 개발 문화를 좋아합니다.
+          </p>
+          <p class="text">
+            복잡한 문제를 단순하게 풀어내는 것, 그리고 사용자가 '쓰기 좋다'고 느끼는 순간을
+            만드는 것이 저의 목표입니다.
+          </p>
+          <div class="stats">
+            <div class="stat"><b data-count="5">0</b><span>년 경력</span></div>
+            <div class="stat"><b data-count="32">0</b><span>완료 프로젝트</span></div>
+            <div class="stat"><b data-count="12">0</b><span>협업 팀</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section alt" id="skills">
+      <div class="container">
+        <h2 class="title reveal"><small>02 — Skills</small>보유 기술</h2>
+        <div class="skills-grid" id="skillsGrid"></div>
+        <div class="chips reveal" id="chips"></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="title reveal"><small>03 — Projects</small>주요 프로젝트</h2>
+        <div class="filters reveal" id="filters">
+          <button class="filter active" data-filter="all">전체</button>
+          <button class="filter" data-filter="web">웹 앱</button>
+          <button class="filter" data-filter="design">디자인 시스템</button>
+          <button class="filter" data-filter="mobile">모바일</button>
+        </div>
+        <div class="project-list" id="projectGrid"></div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section alt" id="experience">
+      <div class="container">
+        <h2 class="title reveal"><small>04 — Experience</small>경력 및 학력</h2>
+        <div class="timeline" id="timeline"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <h2 class="title"><small>05 — Contact</small>함께 일해요</h2>
+          <p class="text">프로젝트 제안, 협업 문의 등 편하게 메시지를 남겨주세요. 보통 하루 안에 답장드립니다.</p>
+        </div>
+        <form class="form reveal" id="contactForm" novalidate>
+          <div class="row">
+            <label>
+              이름
+              <input type="text" id="name" placeholder="홍길동" required />
+            </label>
+            <label>
+              이메일
+              <input type="email" id="email" placeholder="hello@example.com" required />
+            </label>
+          </div>
+          <label>
+            메시지
+            <textarea id="message" rows="5" placeholder="내용을 입력해주세요" required></textarea>
+          </label>
+          <p class="error" id="formError"></p>
+          <button type="submit" class="btn primary full">메시지 보내기</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> 김바이브. All rights reserved.</p>
+      <button class="to-top" id="toTop" aria-label="맨 위로">TOP ↑</button>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
